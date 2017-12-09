@@ -7,8 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        
+    <Frame>
+        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="10,0,-10,0">
+            <TextBlock HorizontalAlignment="Left" Margin="574,126,0,0" TextWrapping="Wrap" Text="TicTacFive!" VerticalAlignment="Top" Height="152" Width="394" FontSize="72"/>
+            <Button Content="1 Player" HorizontalAlignment="Left" Margin="500,383,0,0" VerticalAlignment="Top" Height="65" Width="551" FontSize="30"/>
+            <Button x:Name="TwoPalyersButton" Content="2 Players" HorizontalAlignment="Left" Margin="500,521,0,0" VerticalAlignment="Top" Height="65" Width="551" FontSize="30"/>
+            <Button Content="0 Players" HorizontalAlignment="Left" Margin="500,674,0,0" VerticalAlignment="Top" Height="65" Width="551" FontSize="30"/>
+        </Grid>
 
-    </Grid>
+    </Frame>
 </Page>

@@ -8,7 +8,7 @@ namespace TicTacToe
     [TestClass]
     public class TicTacToeTests
     {
-        [TestMethod]
+        /*[TestMethod]
         public void A_User_Needs_To_Play_With_Zero_Players()
         {
             String promptUser = "With how many user do you want play?"; //Use checkmarks on this one
@@ -122,7 +122,7 @@ namespace TicTacToe
         [TestMethod]
         public void A_User_Needs_To_See_A_Score_Chart()
         {
-        }
+        }*/
 
        
 

@@ -132,15 +132,21 @@ namespace TicTacToe.TicTacToe_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[3];
-            _typeNameTable[0] = "TicTacToe.MainPage";
+            _typeNameTable = new string[6];
+            _typeNameTable[0] = "TicTacToe.TwoPlayersUI";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[3] = "TicTacToe.UserUI";
+            _typeNameTable[4] = "TicTacToe.MainPage";
+            _typeNameTable[5] = "TicTacToe.UserName";
 
-            _typeTable = new global::System.Type[3];
-            _typeTable[0] = typeof(global::TicTacToe.MainPage);
+            _typeTable = new global::System.Type[6];
+            _typeTable[0] = typeof(global::TicTacToe.TwoPlayersUI);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[3] = typeof(global::TicTacToe.UserUI);
+            _typeTable[4] = typeof(global::TicTacToe.MainPage);
+            _typeTable[5] = typeof(global::TicTacToe.UserName);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -175,7 +181,10 @@ namespace TicTacToe.TicTacToe_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_MainPage() { return new global::TicTacToe.MainPage(); }
+        private object Activate_0_TwoPlayersUI() { return new global::TicTacToe.TwoPlayersUI(); }
+        private object Activate_3_UserUI() { return new global::TicTacToe.UserUI(); }
+        private object Activate_4_MainPage() { return new global::TicTacToe.MainPage(); }
+        private object Activate_5_UserName() { return new global::TicTacToe.UserName(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -187,9 +196,9 @@ namespace TicTacToe.TicTacToe_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  TicTacToe.MainPage
+            case 0:   //  TicTacToe.TwoPlayersUI
                 userType = new global::TicTacToe.TicTacToe_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage;
+                userType.Activator = Activate_0_TwoPlayersUI;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -200,6 +209,27 @@ namespace TicTacToe.TicTacToe_XamlTypeInfo
 
             case 2:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::TicTacToe.TicTacToe_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 3:   //  TicTacToe.UserUI
+                userType = new global::TicTacToe.TicTacToe_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_3_UserUI;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 4:   //  TicTacToe.MainPage
+                userType = new global::TicTacToe.TicTacToe_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  TicTacToe.UserName
+                userType = new global::TicTacToe.TicTacToe_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_5_UserName;
+                userType.SetIsLocalType();
+                xamlType = userType;
                 break;
             }
             return xamlType;

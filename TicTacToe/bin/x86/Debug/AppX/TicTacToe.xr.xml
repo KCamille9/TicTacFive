@@ -7,12 +7,43 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
+      <RootProperty Name="Content" />
       <RootProperty Name="Resources" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Frame">
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Background" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
       <RootProperty Name="Children" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="RenderTransformOrigin" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="FontWeight" />
+      <RootProperty Name="MaxHeight" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
@@ -21,10 +52,18 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
-      <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="RenderTransformOrigin" />
       <RootEvent Name="Click" />
+      <RootEvent Name="PointerEntered" />
+      <RootEvent Name="PointerExited" />
     </RootType>
+    <RootType FullName="TicTacToe.TwoPlayersUI" />
+    <RootType FullName="TicTacToe.UserUI" />
     <RootType FullName="TicTacToe.MainPage" />
+    <RootType FullName="TicTacToe.UserName" />
   </Roots.RootTypes>
 </Roots>

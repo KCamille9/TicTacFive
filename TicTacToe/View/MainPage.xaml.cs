@@ -29,15 +29,27 @@ namespace TicTacToe
         bool turn = true; //true = x, false = o
         int turn_count = 0;
 
-        MessageDialog msgDialog;
+        MessageDialog msgDialog; //setting up the dialog message
 
+        static String player1, player2; //Setting up the players
+
+        //Set players
+        public static void SetPlayers(String n1, String n2)
+        {
+            player1 = n1;
+            player2 = n2;
+        }
 
         public MainPage()
         {
             this.InitializeComponent();
+            //Put players name accordingly
+            xScore.Text = player1; 
+            oScore.Text = player2;
         }
 
-        private void button_click(Object sender, RoutedEventArgs e)
+        //Command to put the symbol on a button
+        private void PlaceSymbol(Object sender, RoutedEventArgs e)
         {
             Button b = (Button)sender;
             if (turn)
@@ -49,14 +61,15 @@ namespace TicTacToe
                 b.Content = "O";
             }
 
-            turn = !turn;
-            b.IsEnabled = false; //Para que no puedas cambiar el simbolo en el mismo boton
+            turn = !turn; //Change symbol
+            b.IsEnabled = false; //So that you cannot the symbol on the same button
             turn_count++;
 
-            checkForWinner();
+            CheckForWinner();
         }
 
-        private void checkForWinner()
+        //Command to check if X or O won, vertically, horizontally, or diagonally
+        private void CheckForWinner()
         {
             bool there_is_winner = false;
 
@@ -131,11 +144,15 @@ namespace TicTacToe
                 String winner = "";
                 if (turn)
                 {
-                    winner = "O";
+                    winner = player2;
+                    o_count.Text = (Int32.Parse(o_count.Text) + 1).ToString(); //Counter
+                    turn_count = 0;
                 }
                 else
                 {
-                    winner = "X";
+                    winner = player1;
+                    x_count.Text = (Int32.Parse(x_count.Text) + 1).ToString(); // Counter
+                    turn_count = 0;
                 }
 
                 //Display if X or O won
@@ -145,9 +162,14 @@ namespace TicTacToe
                 //Show continue or exit options
                 msgDialog.Commands.Add(new UICommand("Play again", new UICommandInvokedHandler(this.CommandInvokedHandler1)));
                 msgDialog.Commands.Add(new UICommand("Close", new UICommandInvokedHandler(this.CommandInvokedHandler2)));
+
+                //Reseting first turn to "X"
+                turn = true;
+
             }
             else
             {
+                //if there is a draw
                 if(turn_count == 25)
                 {
                     
@@ -157,6 +179,14 @@ namespace TicTacToe
                     msgDialog.Commands.Add(new UICommand("Play again", new UICommandInvokedHandler(this.CommandInvokedHandler1)));
                     msgDialog.Commands.Add(new UICommand("Close", new UICommandInvokedHandler(this.CommandInvokedHandler2)));
 
+                    //Counter
+                    draw_count.Text = (Int32.Parse(draw_count.Text) + 1).ToString();
+
+                    //Reseting first turn to "X"
+                    turn = true;
+
+                    //reset count
+                    turn_count = 0;
                 }
             }
 
@@ -166,12 +196,16 @@ namespace TicTacToe
         //Restore Screen
         private void CommandInvokedHandler1(IUICommand command)
         {
-            foreach (Button button in GameGrid.Children)
+            foreach (Button button in GameBoard.Children)
             {
-                Button b = (Button)button;
-                b.IsEnabled = true;
-                b.Content = "";
-                turn_count = 0;
+                try //try and catch so it doesn't compkaint about extra buttons
+                {
+                    Button b = (Button)button;
+                    b.IsEnabled = true;
+                    b.Content = "";
+                    turn_count = 0;
+                }
+                catch { }
             }
         }
 
@@ -180,6 +214,7 @@ namespace TicTacToe
             CoreApplication.Exit();
         }
 
+        //Disable all buttons on the board
         private void disableButtons()
         {
             try
@@ -192,6 +227,44 @@ namespace TicTacToe
             }
             catch { }
 
+        }
+
+        //Hover a button to know which turn is it
+        private void ButtonEnter(object sender, PointerRoutedEventArgs e)
+        {
+            Button b = (Button)sender;
+            if (b.IsEnabled)
+            {
+                if (turn)
+                {
+                    b.Content = "X";
+                }
+                else
+                {
+                    b.Content = "O";
+                }
+            }
+            
+        }
+
+        //Leave a button
+        private void ButtonExit(object sender, PointerRoutedEventArgs e)
+        {
+            Button b = (Button)sender;
+
+            if (b.IsEnabled)
+            {
+                b.Content = "";
+            }
+
+        }
+
+        //Command to set all the score to 0
+        private void RestorePoints(object sender, RoutedEventArgs e)
+        {
+            o_count.Text = "0";
+            x_count.Text = "0";
+            draw_count.Text = "0";
         }
     }
 }

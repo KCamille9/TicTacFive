@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Camille\documents\visual studio 2017\Projects\TicTacToe\TicTacToe\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>6E0B10D66159A3470D7A0788BFAA6B802501BB26E191815C35D67763110AD9D5</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>63E0D907C9618766B8A52A5652A335AAACF7E15C5F53412B5182E069FCFAD4F7</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>f8ab50a8-b4f2-4419-a9b8-7646e223d46c_1.0.0.0_x86__dc2j3157w5aqr</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>f8ab50a8-b4f2-4419-a9b8-7646e223d46c_dc2j3157w5aqr!App</RegisteredUserModeAppID>
     <RegisteredPackageID>f8ab50a8-b4f2-4419-a9b8-7646e223d46c</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Camille\documents\visual studio 2017\Projects\TicTacToe\TicTacToe\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-11-29T20:20:53.905</Modified>
+      <Modified>2017-12-09T01:12:27.620</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Camille\documents\visual studio 2017\Projects\TicTacToe\TicTacToe\bin\x86\Debug\TicTacToe.exe">
       <PackagePath>entrypoint\TicTacToe.exe</PackagePath>
-      <Modified>2017-11-29T20:20:53.273</Modified>
+      <Modified>2017-12-09T01:11:36.161</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camille\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -535,7 +535,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camille\documents\visual studio 2017\Projects\TicTacToe\TicTacToe\bin\x86\Debug\TicTacToe.xr.xml">
       <PackagePath>TicTacToe.xr.xml</PackagePath>
-      <Modified>2017-11-29T19:51:28.849</Modified>
+      <Modified>2017-12-09T01:11:34.558</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -544,11 +544,11 @@
     <AppxPackagedFile Include="C:\Users\Camille\documents\visual studio 2017\Projects\TicTacToe\TicTacToe\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-11-29T20:19:19.854</Modified>
+      <Modified>2017-12-09T01:12:07.262</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camille\documents\visual studio 2017\Projects\TicTacToe\TicTacToe\bin\x86\Debug\Core\TicTacToe.exe">
       <PackagePath>TicTacToe.exe</PackagePath>
-      <Modified>2017-11-29T20:20:53.884</Modified>
+      <Modified>2017-12-09T01:12:27.599</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

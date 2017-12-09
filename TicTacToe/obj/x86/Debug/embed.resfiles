@@ -1,2 +1,5 @@
 App.xbf
+View\InitialPage.xbf
 View\MainPage.xbf
+View\TwoPlayersUI.xbf
+View\UserName.xbf

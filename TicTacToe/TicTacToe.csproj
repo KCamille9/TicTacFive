@@ -95,6 +95,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\TwoPlayersUI.xaml.cs">
+      <DependentUpon>TwoPlayersUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InitialPage.xaml.cs">
+      <DependentUpon>InitialPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -123,6 +129,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="View\TwoPlayersUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InitialPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
